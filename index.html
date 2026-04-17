@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Yan</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background-color:white;
+            font-family:times;
+            font-size:14px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            cursor:default;
+        }
+
+        ::selection{
+            background-color:blue;
+            color:white;
+        }
+
+        a{
+            color:blue;
+        }
+
+        .detail a{
+            color:black;
+        }
+
+        a:hover{
+            background-color:blue;
+            color:white;
+        }
+
+        p{
+            padding:0;
+            margin:0;
+        }
+
+        h1{
+            font-size:14px;
+            margin:0;
+            padding:0;
+            font-weight:normal;
+        }
+
+        .split{
+            display:flex;
+            flex-direction:row;
+            gap:50px;
+            padding:50px;
+            width:100%;
+            max-width:800px;
+            height:100vh;
+            box-sizing:border-box;
+        }
+
+        .info-wrapper{
+            flex:0.8;
+        }
+
+        .info{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+        }
+
+        .project-wrapper{
+            height:100%;
+            overflow-y:scroll;
+            overscroll-behavior:none;
+            display:flex;
+            flex-direction:column;
+            gap:100px;
+            scrollbar-width:none;
+        }
+
+        .project{
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            gap:10px;
+        }
+
+        .text{
+            display:flex;
+            flex-direction:column;
+        }
+
+        .title{
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-between;
+            border-bottom:1px dotted black;
+            border-top:1px dotted black;
+            padding:0 10px;
+            background-color:rgb(238, 238, 238);
+            margin-bottom:10px;
+        }
+
+        .detail{
+            color:grey;
+        }
+
+        .asset{
+            width:100%;
+        }
+
+        .half{
+            display:flex;
+            flex-direction:row;
+            gap:10px;
+        }
+
+        video{
+            padding:0;
+            margin:0;
+        }
+
+        .darker{
+            filter:brightness(0.97);
+        }
+
+        .asset.full video{
+            width:100%;
+        }
+
+        .asset.half video{
+            flex:1;
+            min-width:0;
+        }
+
+        @media (orientation:portrait), (max-width:700px){
+            body{
+                overflow:auto;
+                height:auto;
+            }
+
+            .split{
+                flex-direction:column;
+                height:auto;
+            }
+
+            .project-wrapper{
+                height:auto;
+                overflow-y:visible;
+            }
+        }
+
+        .divider{
+            height:1px;
+            width:100%;
+            background-color:black;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="split">
+        <div class="info-wrapper">
+            <div class="info">
+                <p>②〇②⑥<br>&nbsp&nbsp＼<br>&nbsp;&nbsp;&nbsp;&nbsp;(portfolio).<a href="https://ryanyan.ca" target="_blank">ryanyan.ca</a></p>
+                <img style="width:80px" src="assets/mii.gif">
+                <p><i>Ryan Yan</i> is a graphic / motion designer based in Brooklyn ⇆ Toronto. currently →→→ <a href="">𖤐Pentagram</a>. He studied Graphic Design and Computation at the <a href="">⊙Rhode Island School of Design.</a> Previously ↩ at <a href="">Apple</a>, <a href="">RISD Design Guild</a>.<br><br>🄲🄾🄽🅃🄰🄲🅃<br><a href="https://instagram.com/yanshngyun" target="_blank">Instagram ↗</a></p>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <div class="project">
+                <div class="text">
+                    <div class="title">
+                        <h1>① Chiba Tech</h1>
+                        <p>2025</p>
+                    </div>
+                    <p class="detail">I worked with designer Yoshi Torralva to bring the Chiba Tech's identity to life. My favourite part of this project was rigging the 'chibuggy' in a way that allowed it to move dynamically across different contexts—as the underlying structure of complex layouts, the precise movement of a pen plotter, or the animated liveliness of a mascot. <a href="https://www.pentagram.com/work/chiba-tech" target="_blank">Case study ↗</a></p>
+                </div>
+                <div class="asset full">
+                    <video class="darker" src="assets/chiba/251124_chiba_logo_animated.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video class="darker" src="assets/chiba/251124_chiba_plotter.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video src="assets/chiba/251112_chiba_layout.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset half">
+                    <video src="assets/chiba/yanshngyun_1764890924_3780501398634974847_44931311710.mp4" autoplay loop muted></video>
+                    <video src="assets/chiba/yanshngyun_1764890924_3780501406730003571_44931311710.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video class="darker" src="assets/chiba/251124_chiba_expressions_text.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video src="assets/chiba/251124_chiba_congrats_mockup.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset half">
+                    <video class="darker" src="assets/chiba/251117_2_chiba_comp_van_1.mp4" autoplay loop muted></video>
+                    <video class="darker" src="assets/chiba/251112_chiba_bye.mp4" autoplay loop muted></video>
+
+                </div>
+            </div>
+            <div class="project">
+                <div class="text">
+                    <div class="title">
+                        <h1>② Climate Tech Map</h1>
+                        <p>2025</p>
+                    </div>
+                    <p class="detail">Our main visual and interaction of this website for exploring climate technologies is the 'wheel,' inspired by sun rays and star charts. Since the beginning of the project, I treated motion behaviors as a key parallel track of development—one that ultimately informed the main visual direction. From the early kinetic tests of the circular atlas to the rippling movement of the color wheel, motion shaped the overall interactivity of the web-based experience. <i>+++ Bonus I animated a custom video for the coalition at Times Square during New York Climate Week 2025.</i> <a href="https://www.pentagram.com/work/climate-tech-map" target="_blank">Case study ↗</a></p>
+                </div>
+                <div class="asset full">
+                    <video src="assets/ctm/01_260414_CTM_HERO_1920x1080.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video src="assets/ctm/08_260414_CTM_TIME_SQUARE_1920x1080.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video src="assets/ctm/07_260414_CTM_MOTIONTESTS_1440x1440.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video src="assets/ctm/13_260414_CTM_ILLUS_1920x1080.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video class="darker" src="assets/ctm/09_260414_CTM_MOBILE_LIST_1080x1350.mp4" autoplay loop muted></video>
+                </div>
+                <p>Project Team: Giorgiga Lupi, Rachel Crawford, Zach Scheinfeld, Ryan Yan, Ed Ryan<br>Collaborators: Liz Ryan, Chelsea Herman, Chris Vela, Accurat</p>
+            </div>
+            <div class="project">
+                <div class="text">
+                    <div class="title">
+                        <h1>③ MTA Arts & Design 40th</h1>
+                        <p>2026</p>
+                    </div>
+                    <p class="detail">With designer Ed Ryan, I developed the motion system for the MTA Arts and Design 40th Anniversary campaign.</p>
+                </div>
+                <div class="asset full">
+                    <video src="assets/mta40/RN_LOGO_GRADIENT_DESKTOP_1920x1080.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video src="assets/mta40/RN_SubwayInterior_1080x1440.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video src="assets/mta40/RN_Trains_1920x1080.mp4" autoplay loop muted></video>
+                </div>
+            </div>
+            <div class="project">
+                <div class="text">
+                    <div class="title">
+                        <h1>④ OWIS Trailer</h1>
+                        <p>2026</p>
+                    </div>
+                    <p class="detail">I created type animations for OWIS's <a href="https://www.youtube.com/watch?v=_hpBjSBqKnA" target="_blank">debut trailer film ↗</a>. Magical, ornamental, and made of light!!!!</p>
+                </div>
+                <div class="asset full">
+                    <video src="assets/owis/1_trailer_loop 2.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video src="assets/owis/2_teaser_loop.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video src="assets/owis/lyrics_raw.mp4" autoplay loop muted></video>
+                </div>
+                <div class="asset full">
+                    <video src="assets/owis/welcome_raw.mp4" autoplay loop muted></video>
+                </div>
+                <p>Client: RIGIEND</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
