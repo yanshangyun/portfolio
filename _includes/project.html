@@ -1,0 +1,23 @@
+<div class="project">
+    <div class="title">
+        <h1>{{ include.project.rank }} {{ include.project.title }}</h1>
+        <p>{{ include.project.year }}</p>
+    </div>
+    <div class="text">
+        <p class="detail">{{ include.project.description }}</p>
+    </div>
+    {% for row in include.project.rows %}
+    <div class="asset {{ row.layout }}">
+        {% for asset in row.assets %}
+        {% if asset.type == 'video' %}
+        <video{% if asset.class %} class="{{ asset.class }}"{% endif %} data-src="{{ asset.src }}" loop muted playsinline preload="none"></video>
+        {% else %}
+        <img{% if asset.class %} class="{{ asset.class }}"{% endif %} src="{{ asset.src }}">
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+    {% if include.project.footer %}
+    <p>{{ include.project.footer }}</p>
+    {% endif %}
+</div>

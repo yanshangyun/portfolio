@@ -1,0 +1,183 @@
+@font-face{
+    font-family:"ABC Areal";
+    src:url("font/ABCArealVariable.woff2") format("woff2");
+}
+
+@font-face{
+    font-family:"ABC Area Mono";
+    src:url("font/ABCArealMonoVariable.woff2") format("woff2");
+}
+
+body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:white;
+    font-family:"ABC Areal",arial;
+    font-size:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:default;
+}
+
+::selection{
+    background-color:blue;
+    color:white;
+}
+
+a{
+    color:blue;
+}
+
+.detail a{
+    color:black;
+}
+
+a:hover{
+    background-color:blue;
+    color:white;
+}
+
+p{
+    padding:0;
+    margin:0;
+}
+
+h1{
+    font-size:14px;
+    margin:0;
+    padding:0;
+    font-weight:normal;
+}
+
+h2{
+    color:rgb(196, 196, 196);
+    font-size:24px;
+    line-height:1;
+    font-weight:normal;
+}
+
+.split{
+    display:flex;
+    flex-direction:row;
+    gap:50px;
+    padding:50px;
+    width:100%;
+    max-width:800px;
+    height:100vh;
+    box-sizing:border-box;
+}
+
+.info-wrapper{
+    flex:0.8;
+}
+
+.info{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.project-wrapper{
+    height:100%;
+    overflow-y:scroll;
+    overscroll-behavior:none;
+    display:flex;
+    flex-direction:column;
+    gap:100px;
+    scrollbar-width:none;
+}
+
+.project{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    gap:10px;
+}
+
+.text{
+    display:flex;
+    flex-direction:column;
+}
+
+.title{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px dotted black;
+    border-top:1px dotted black;
+    padding:0 10px;
+    background-color:rgb(238, 238, 238);
+    position:sticky;
+    top:0;
+    z-index:1;
+}
+
+.detail{
+    color:rgb(163, 163, 163);
+}
+
+.asset{
+    width:100%;
+}
+
+.half{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+
+video{
+    padding:0;
+    margin:0;
+}
+
+img{
+    width:100%;
+    object-fit:cover;
+}
+
+.darker{
+    filter:brightness(0.97);
+}
+
+.asset.full video{
+    width:100%;
+}
+
+.asset.half video{
+    flex:1;
+    min-width:0;
+}
+
+.asset.half img{
+    flex:1;
+    min-width:0;
+}
+
+@media (orientation:portrait), (max-width:700px){
+    body{
+        overflow:auto;
+        height:auto;
+    }
+
+    .split{
+        flex-direction:column;
+        height:auto;
+        padding:5px;
+    }
+
+    .project-wrapper{
+        height:auto;
+        overflow-y:visible;
+    }
+}
+
+.divider{
+    height:1px;
+    width:100%;
+    background-color:black;
+    margin-bottom:10px;
+}
